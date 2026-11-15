@@ -8,11 +8,11 @@ jobs:
       contents: read
       attestations: write
     steps:
-      - run: echo "legit artifact v1" > artifact.bin
-      - uses: actions/att
+      - run: echo "legit n
+      - uses: actions/attest-build-provenance@v1
         with:
-          subject-path: a
-      - uses: actions/upload-artifact@v4
+          subject-path: artifact.bin
+      - uses: actions/upl
         with:
           name: artifact
-          path: artifact.
+          path: artifact.bin
