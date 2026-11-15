@@ -8,7 +8,7 @@ jobs:
       contents: read
       attestations: write
     steps:
-      - run: echo "legit "legit artifact v1" > artifact.bin
+      - run: echo legit artifact v1 > artifact.bin
       - uses: actions/attest-build-provenance@v1
         with:
           subject-path: artifact.bin
